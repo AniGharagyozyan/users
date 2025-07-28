@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="data:,"> <!-- GET http://127.0.0.1:5500/favicon.ico 404 ic azatvelu hamar -->
+</head>
+
+<body>
+    <script src="appi.js"></script>
+    <div style="display: flex;  gap: 40px;">
+        <div>
+            <button class="btn" id="btn">Followers</button>
+            <div id="out"></div>
+            <div id="pages"></div>
+            <div id="pagination" style="display:none;"> <!-- vor chereva minchev click chanenq -->
+                <button id="prev">← Previous</button>
+                <button id="next">Next →</button>
+                <span>Page: <span id="page">1</span></span>
+            </div>
+        </div>
+        <div>
+            <h3>Add user</h3>
+            <form id="userForm">
+                <div>
+                    <label>Id:</label><br />
+                    <input type="text" id="userId" placeholder="ID" /> <!-- required - Это поле обязательно для заполнения -->
+                </div>
+                <div>
+                    <label>Photo:</label><br />
+                    <input type="file" id="photo" accept="image/*">
+                </div>
+                <div>
+                    <label>Name:</label><br />
+                    <input type="text" id="name" placeholder="Name" required />
+                </div>
+                <div>
+                    <label>Email:</label><br />
+                    <input type="email" id="email" placeholder="Email"/>
+                    <p id="error" style="color: red;"></p>
+                </div>
+                <div>
+                    <label>Gender:</label><br />
+                    <input type="text" id="gender" placeholder="Gender" required />
+                </div>
+                <div>
+                    <label>Status:</label><br />
+                    <input type="text" id="status" placeholder="Status" required />
+                </div>
+                <!-- div style="margin-top:10px;">
+                    <button type="submit">Add</button>
+                </div> -->
+                <button type="button" id="addRowBtn">Add row</button>
+            </form>
+
+        </div>
+</body>
+
+</html>
